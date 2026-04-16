@@ -11,8 +11,8 @@ function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("show");
 }
 
-function openVideo() {
-  window.open("https://youtu.be/zKz2o3TJ9Iw", "_blank");
+function openVideo(videoId) {
+  window.open(`https://youtu.be/${videoId}`, "_blank");
 }
 
 /* scroll reveal animation */
