@@ -1,22 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rivelio Agency</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
-<body style="background-color:black; color:white; font-family:sans-serif; text-align:center;">
+<body>
 
-  <h1>Rivelio</h1>
-  <p>We create high-retention short-form content with motion graphics.</p>
-  <br>
-  <h2>Our Services</h2>
-  <p>Short-form edits, captions, motion graphics</p>
-  <br>
-  <h2>Portfolio</h2>
-  <p>Coming soon...</p>
-  <br>
-  <h2>Contact</h2>
-  <p>Instagram: @rivelio.creates</p>
-  <br>
+  <!-- floating background -->
+  <div class="bg-glow"></div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="logo">RIVELIO</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="glitch">RIVELIO AGENCY</h1>
+      <p>Design • Edit • Elevate</p>
+      <button onclick="scrollToSection('work')">Explore Work</button>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="reveal">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">YouTube Videos</div>
+      <div class="card">Motion Graphics</div>
+      <div class="card">Reels / Shorts</div>
+      <div class="card">Cinematic Ads</div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="reveal">
+    <h2>Featured Work</h2>
+
+    <div class="work-grid">
+      <div class="work-card" onclick="openVideo()">
+        <img src="https://img.youtube.com/vi/zKz2o3TJ9Iw/maxresdefault.jpg" alt="Edit">
+        <div class="play">▶</div>
+      </div>
+      <div class="work-card" onclick="openVideo()">
+        <img src="https://img.youtube.com/vi/Q-x0WAulHgU/maxresdefault.jpg" alt="Edit">
+        <div class="play">▶</div>
+      </div>
+      <div class="work-card" onclick="openVideo()">
+        <img src="https://img.youtube.com/vi/XemG1JYcg2k/maxresdefault.jpg" alt="Edit">
+        <div class="play">▶</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="reveal">
+    <h2>Why Us</h2>
+    <p>
+      We don’t just create edits — we build experiences that hold attention and leave an impact. At Rivelio Agency, every project is crafted with precision, creativity, and a focus on storytelling that connects emotionally with the audience. Whether it’s anime-style edits, cinematic reels, or motion graphics for brands, our goal is to turn raw ideas into powerful visuals that stand out in a crowded digital space. We blend fast-paced modern editing techniques with aesthetic visuals to make content that not only looks good but performs well. If you want edits that feel alive, engaging, and unforgettable, you’re in the right place.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <p>rivelioagency@gmail.com</p>
+    <button onclick="copyEmail()">Copy Email</button>
+  </section>
+
+  <footer>
+    <p>© 2026 Rivelio Agency</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
