@@ -11,10 +11,53 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 20%, #ff00cc55, transparent 40%),
-              radial-gradient(circle at 80% 70%, #00ffe055, transparent 40%);
-  animation: moveGlow 8s infinite alternate;
+  background: 
+    radial-gradient(circle at 20% 30%, #1e3a5f55, transparent 50%),
+    radial-gradient(circle at 80% 70%, #3a7ca555, transparent 50%),
+    linear-gradient(120deg, #02040a, #050508, #0a1624);
+  overflow: hidden;
   z-index: -1;
+}
+
+.bg-glow::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: 
+    radial-gradient(ellipse at 30% 40%, #1b3b5a, transparent 60%),
+    radial-gradient(ellipse at 60% 60%, #2f5f85, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, #0f2740, transparent 70%);
+  filter: blur(60px);
+  opacity: 0.6;
+  animation: flow 20s infinite linear;
+}
+
+.bg-glow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(#ffffff08 1px, transparent 1px),
+    radial-gradient(#ffffff05 1px, transparent 1px);
+  background-size: 3px 3px, 6px 6px;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+
+@keyframes flow {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 @keyframes moveGlow {
