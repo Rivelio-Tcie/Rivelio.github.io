@@ -11,8 +11,8 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 20%, #6a00ff33, transparent 40%),
-              radial-gradient(circle at 80% 70%, #00d4ff33, transparent 40%);
+  background: radial-gradient(circle at 20% 20%, #ff00cc55, transparent 40%),
+              radial-gradient(circle at 80% 70%, #00ffe055, transparent 40%);
   animation: moveGlow 8s infinite alternate;
   z-index: -1;
 }
