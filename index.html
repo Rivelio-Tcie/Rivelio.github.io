@@ -4,17 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rivelio Agency</title>
+
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-  <!-- floating background -->
-  <div class="bg-glow"></div>
+  <!-- BACKGROUND VIDEO -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="Breeze.mp4" type="video/mp4">
+  </video>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="Timeless (Instrumental).mp3" type="audio/mp3">
+  </audio>
+
+  <!-- MUSIC CONTROLS -->
+  <div class="music-controls">
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.15">
+    <button id="musicBtn">🔇</button>
+  </div>
 
   <!-- NAV -->
   <nav class="navbar">
-    <div class="logo">RIVELIO</div>
+    <div class="logo">
+      <img src="Rivelio.jpg" alt="logo">
+    </div>
 
     <div class="nav-links" id="navLinks">
       <a href="#home">Home</a>
@@ -56,10 +74,12 @@
         <img src="https://img.youtube.com/vi/zKz2o3TJ9Iw/maxresdefault.jpg" alt="Edit">
         <div class="play">▶</div>
       </div>
+
       <div class="work-card" onclick="openVideo('Q-x0WAulHgU')">
         <img src="https://img.youtube.com/vi/Q-x0WAulHgU/maxresdefault.jpg" alt="Edit">
         <div class="play">▶</div>
       </div>
+
       <div class="work-card" onclick="openVideo('XemG1JYcg2k')">
         <img src="https://img.youtube.com/vi/XemG1JYcg2k/maxresdefault.jpg" alt="Edit">
         <div class="play">▶</div>
@@ -71,21 +91,46 @@
   <section id="why" class="reveal">
     <h2>Why Us</h2>
     <p>
-      We don’t just create edits — we build experiences that hold attention and leave an impact. At Rivelio Agency, every project is crafted with precision, creativity, and a focus on storytelling that connects emotionally with the audience. Whether it’s anime-style edits, cinematic reels, or motion graphics for brands, our goal is to turn raw ideas into powerful visuals that stand out in a crowded digital space. We blend fast-paced modern editing techniques with aesthetic visuals to make content that not only looks good but performs well. If you want edits that feel alive, engaging, and unforgettable, you’re in the right place.
+      We don’t just create edits — we build experiences that hold attention and leave an impact. At Rivelio Agency, every project is crafted with precision, creativity, and storytelling that connects emotionally with the audience.
     </p>
   </section>
 
   <section>
     <h2>Our Approach</h2>
     <p>We create high-retention content that grabs attention and boosts engagement.</p>
-    <p></p>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="reveal">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>rivelioagency@gmail.com</p>
-    <button onclick="copyEmail()">Copy Email</button>
+
+    <div class="grid">
+
+      <a href="https://youtube.com/@senbonzakura222" target="_blank" class="card contact-card">
+        <i class="fa-brands fa-youtube"></i>
+        <h3>YouTube</h3>
+        <p>Watch our edits</p>
+      </a>
+
+      <a href="https://instagram.com/rivelio.creates" target="_blank" class="card contact-card">
+        <i class="fa-brands fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p>@rivelio.creates</p>
+      </a>
+
+      <a href="https://framefolio.in/" target="_blank" class="card contact-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Framefolio</h3>
+        <p>Our portfolio</p>
+      </a>
+
+      <div class="card contact-card">
+        <i class="fa-solid fa-plus"></i>
+        <h3>Coming Soon</h3>
+        <p>More platforms...</p>
+      </div>
+
+    </div>
   </section>
 
   <footer>
@@ -94,4 +139,4 @@
 
   <script src="script.js"></script>
 </body>
-</html> 
+</html>
